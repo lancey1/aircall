@@ -14,7 +14,7 @@ export default function ActivityFeedItem(props) {
   if (props === undefined) {
     return <Fragment>Still loading...</Fragment>;
   }
-  const [showDetails, setShowDetails] = useState(true);
+  const [showDetails, setShowDetails] = useState(false);
   const navigate = useNavigate();
   const dateObj = new Date(props.dateCreated);
   const day = dateObj.toLocaleDateString();

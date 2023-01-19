@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Loading() {
+export default function Loading(props) {
     return (
       <div className="spinnerContainer">
         <div className="loadingSpinner"></div>
-        <p>Loading Details</p>
+        <p>{props.text}</p>
       </div>
     );
   }

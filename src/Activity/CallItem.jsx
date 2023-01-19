@@ -30,9 +30,10 @@ export default function CallItem() {
   }, []);
 
   if (isLoading || !callData) {
-    return <Loading />;
+    return <Loading text = {"Loading Details"} />;
   }
   const archiveHandler = async (event) => {
+    setLoading(true)
     try {
       let response = await fetch(`${URL}/${id}`, {
         method: "PATCH",
@@ -54,6 +55,7 @@ export default function CallItem() {
     navigate('/')
   };
   const unarchiveHandler = async (event) => {
+    setLoading(true)
     try {
       let response = await fetch(`${URL}/${id}`, {
         method: "PATCH",

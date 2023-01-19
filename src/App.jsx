@@ -14,6 +14,7 @@ const App = () => {
   const URL =
     "https://charming-bat-singlet.cyclic.app/https://cerulean-marlin-wig.cyclic.app/activities";
 
+  // fetch data from API endpoint
   useEffect(() => {
     (async () => {
       try {
@@ -26,6 +27,7 @@ const App = () => {
     })();
   }, [data]);
 
+  
   if (data === undefined) {
     return (<Fragment>Still loading...</Fragment>);
   }
